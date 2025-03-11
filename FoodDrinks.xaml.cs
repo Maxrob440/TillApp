@@ -25,9 +25,6 @@ namespace TillApp
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-        }
 
         private void viewFood(object sender, RoutedEventArgs e)
         {

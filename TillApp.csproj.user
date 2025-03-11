@@ -11,5 +11,11 @@
     <Compile Update="FoodDrinks.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="ConfirmationDialog.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TabSelector.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

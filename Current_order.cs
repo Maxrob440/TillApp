@@ -24,7 +24,7 @@ namespace TillApp
                 return _instance;
             }
         }
-        List<Object> current_order = new List<Object>();
+        List<List<int>> current_order = new List<List<int>>();
 
         public void add_item(int item, int quant)
         {
@@ -33,20 +33,12 @@ namespace TillApp
             One_item.Add(quant);
             current_order.Add(One_item);
         }
-        public void remove_item(int item)
+        public void remove_item(int index) //Removes item from list based on index
         {
-            for (int i = 0; i < current_order.Count; i++)
-            {
-                List<Object> One_item = (List<Object>)current_order[i];
-                if ((int)One_item[0] == item)
-                {
-                    current_order.RemoveAt(i);
-                    break;
-                }
-            }
+            current_order.RemoveAt(index);
         }
 
-        public List<Object> get_current()
+        public List<List<int>> get_current()
         {
             return this.current_order;
 
@@ -55,7 +47,6 @@ namespace TillApp
         public void pay_order()
         {
             List<Object> Transaction = new List<Object>();
-
             DataBaseHelper.Instance.addTransaction(this.current_order);
             current_order.Clear();
         }

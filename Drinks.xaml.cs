@@ -40,7 +40,7 @@ namespace TillApp
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             Console.WriteLine("Page Loaded");
-            List<Object> current_order = Current_order.Instance.get_current();
+            List<List<int>> current_order = Current_order.Instance.get_current();
             //List<string> transactions = DataBaseHelper.Instance.getTransactions();
             transactionlistbox.Items.Clear();
             foreach (List<int> transaction in current_order)
@@ -49,18 +49,20 @@ namespace TillApp
                 int Quantity = transaction[1];
                 string ItemName = DataBaseHelper.Instance.get_name_from_itemID(ItemId);
                 float Price = DataBaseHelper.Instance.get_price_from_itemID(ItemId);
-                string ToAdd = $"{ItemName} - {Quantity} = £{Price}";
+                float total_price = Price * Quantity;
+                string ToAdd = $"{ItemName} - {Quantity} = £{total_price}";
                 transactionlistbox.Items.Add(ToAdd);
-                totalpricetextbox.Text = $"Total Price: £{Current_order.Instance.total_price()}";
+
 
             }
+            totalpricetextbox.Text = $"Total Price: £{Current_order.Instance.total_price()}";
         }
 
         private void beer(object sender, RoutedEventArgs e)
         {
             int quantity = (int)ItemComboBox.SelectedItem;
             Current_order.Instance.add_item(1, quantity);
-            Debug.WriteLine("Beer added");
+            ItemComboBox.SelectedIndex = 0;
             Page_Loaded(sender, e);
 
 
@@ -71,8 +73,39 @@ namespace TillApp
             int quantity = (int)ItemComboBox.SelectedItem;
 
             Current_order.Instance.add_item(2, quantity);
-            Debug.WriteLine("Coke added");
+            ItemComboBox.SelectedIndex = 0;
             Page_Loaded(sender, e);
+        }
+
+        private void pay(object sender, RoutedEventArgs e)
+        {
+            ConfirmationDialog dialog = new ConfirmationDialog();
+            dialog.ShowDialog();
+            MessageBoxResult result = dialog.Result;
+            if (result == MessageBoxResult.Yes)
+            {
+                Current_order.Instance.pay_order();
+                Page_Loaded(sender, e);
+            }
+            Page_Loaded(sender, e);
+
+        }
+        private void removeitem(object sender, RoutedEventArgs e)
+        {
+            if (transactionlistbox.SelectedIndex != -1)
+            {
+                int index = transactionlistbox.SelectedIndex;
+                Current_order.Instance.remove_item(index);
+                Debug.WriteLine(Current_order.Instance.get_current());
+                Debug.WriteLine(Current_order.Instance.total_price());
+                Page_Loaded(sender, e);
+            }
+        }
+
+        private void home(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new FoodDrinks());
+
         }
     }
 }

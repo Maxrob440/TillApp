@@ -8,8 +8,8 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="FoodDrinks">
 
-    <Grid>
-        <Button Content="Food" HorizontalAlignment="Left" Height="181" Margin="97,117,0,0" VerticalAlignment="Top" Width="185" Click="viewFood" RenderTransformOrigin="0.5,0.5">
+    <Canvas>
+        <Button Content="Food, CURRENT NOT ENABLED" HorizontalAlignment="Left" Height="181" Margin="97,117,0,0" VerticalAlignment="Top" Width="185" Click="viewFood" RenderTransformOrigin="0.5,0.5">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -20,7 +20,7 @@
             </Button.RenderTransform>
         </Button>
         <Button Content="Drinks" HorizontalAlignment="Left" Height="176" Margin="485,117,0,0" VerticalAlignment="Top" Width="236" Click="Button_Click_1"/>
-        <Button Content="PAY" Margin="609,351,79,32" Click="Pay"/>
+        <Button Content="PAY" Click="Pay" Height="35" Canvas.Left="603" Canvas.Top="316" Width="90"/>
 
-    </Grid>
+    </Canvas>
 </Page>

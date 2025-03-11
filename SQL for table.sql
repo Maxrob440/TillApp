@@ -17,10 +17,9 @@ CREATE TRIGGER IF NOT EXISTS update_total_price_after_insert
 AFTER INSERT ON ORDERS
 FOR EACH ROW
 BEGIN
-    -- Update the total price for the new row in ORDERS based on the ITEM_ID and QUANTITY
+    -- Update the total price for all rows in ORDERS based on the ITEM_ID and QUANTITY
     UPDATE ORDERS
-    SET TOTAL_PRICE = (SELECT PRICE FROM ITEMS WHERE ITEM_ID = NEW.ITEM_ID) * NEW.QUANTITY
-    WHERE ORDER_ID = NEW.ORDER_ID;
+    SET TOTAL_PRICE = (SELECT PRICE FROM ITEMS WHERE ITEM_ID = ORDERS.ITEM_ID) * ORDERS.QUANTITY;
 END;
 
 

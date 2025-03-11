@@ -1,0 +1,21 @@
+﻿<Window x:Class="TillApp.TabSelector"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TillApp"
+        mc:Ignorable="d"
+        Title="TabSelector" Height="450" Width="200
+        " Loaded="Page_Loaded" >
+    <Canvas>
+
+
+        <ListBox x:Name="tablistbox" Height="332" Width="200" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <Button Content="Pay" Height="39" Canvas.Left="150" Canvas.Top="385" Width="40" HorizontalAlignment="Left" VerticalAlignment="Center" Click="pay"/>
+        <Button Content="Add" Height="39" Canvas.Left="77" Canvas.Top="385" Width="46" HorizontalAlignment="Center" VerticalAlignment="Center" Click="add_to_tab"/>
+        <Button Content="NEW" Height="39" Canvas.Left="10" Canvas.Top="385" Width="46" HorizontalAlignment="Left" VerticalAlignment="Center" Click="new_tab"/>
+        <Button Content="SAVE" Canvas.Left="77" Canvas.Top="337" Height="43" Width="46" Click="save"/>
+
+    </Canvas
+        >
+</Window>

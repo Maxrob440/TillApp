@@ -9,13 +9,15 @@
       Title="Drinks" Loaded="Page_Loaded">
 
     <Canvas>
-        <ListBox x:Name ="transactionlistbox" HorizontalAlignment="Left" Height="289" Margin="558,44,0,0" VerticalAlignment="Top" Width="221"/>
+        <ListBox x:Name ="transactionlistbox" HorizontalAlignment="Center" Height="289" VerticalAlignment="Top" Width="221" Canvas.Left="558" Canvas.Top="28" SelectionChanged="removeitem"/>
         <Button Content="Add Beer" Click="beer" Canvas.Left="71" Canvas.Top="189" Height="36" Width="72"/>
-        <TextBox Text="Total Price £0.00" x:Name ="totalpricetextbox" HorizontalAlignment="Right" Height="47" Margin="558,338,0,0" VerticalAlignment="Top" Width="227"/>
+        <TextBox Text="Total Price £0.00" x:Name ="totalpricetextbox" HorizontalAlignment="Left" Height="47" VerticalAlignment="Center" Width="110" Canvas.Left="558" Canvas.Top="323"/>
         <Button Content="Add Coke" Click="coke" Canvas.Left="167" Canvas.Top="189" Height="36" Width="83"/>
         <StackPanel Margin="695,402,0,0"/>
-        <ComboBox x:Name="ItemComboBox" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="78" Height="48" Canvas.Left="288" Canvas.Top="28"/>
+        <ComboBox x:Name="ItemComboBox" HorizontalAlignment="Left" VerticalAlignment="Center" Width="78" Height="48" Canvas.Left="306" Canvas.Top="28"/>
         <TextBlock x:Name="SelectedItemTextBlock" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="63,303,0,0" Width="160" Height="40"/>
+        <Button Content="PAY" Height="47" Canvas.Left="673" Canvas.Top="323" Width="106" Click="pay"/>
+        <Button Content="HOME" Height="41" Width="58" Canvas.Left="71" Canvas.Top="28" Click="home"/>
 
 
     </Canvas>

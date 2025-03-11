@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET9_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NET9_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
 C:\Users\maxro\Desktop\Uni work 2024\Github\TillApp\TillApp\App.xaml
-42067800193
+6761899945
 
-111339756204
+141818665012
 2051872757505
-Drinks.xaml;Food.xaml;FoodDrinks.xaml;MainWindow.xaml;
+ConfirmationDialog.xaml;Drinks.xaml;Food.xaml;FoodDrinks.xaml;MainWindow.xaml;TabSelector.xaml;
 
 False
 

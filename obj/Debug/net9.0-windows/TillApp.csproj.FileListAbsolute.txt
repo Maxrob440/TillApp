@@ -40,3 +40,8 @@ C:\Users\maxro\Desktop\Uni work 2024\Github\TillApp\TillApp\bin\Debug\net9.0-win
 C:\Users\maxro\Desktop\Uni work 2024\Github\TillApp\TillApp\bin\Debug\net9.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\maxro\Desktop\Uni work 2024\Github\TillApp\TillApp\obj\Debug\net9.0-windows\TillApp.csproj.AssemblyReference.cache
 C:\Users\maxro\Desktop\Uni work 2024\Github\TillApp\TillApp\obj\Debug\net9.0-windows\TillApp.csproj.Up2Date
+C:\Users\maxro\Desktop\Uni work 2024\Github\TillApp\TillApp\obj\Debug\net9.0-windows\TillApp.sourcelink.json
+C:\Users\maxro\Desktop\Uni work 2024\Github\TillApp\TillApp\obj\Debug\net9.0-windows\ConfirmationDialog.baml
+C:\Users\maxro\Desktop\Uni work 2024\Github\TillApp\TillApp\obj\Debug\net9.0-windows\ConfirmationDialog.g.cs
+C:\Users\maxro\Desktop\Uni work 2024\Github\TillApp\TillApp\obj\Debug\net9.0-windows\TabSelector.g.cs
+C:\Users\maxro\Desktop\Uni work 2024\Github\TillApp\TillApp\obj\Debug\net9.0-windows\TabSelector.baml

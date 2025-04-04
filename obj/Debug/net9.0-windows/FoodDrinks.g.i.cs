@@ -53,7 +53,7 @@ namespace TillApp {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/TillApp;V1.0.0.0;component/fooddrinks.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/TillApp;component/fooddrinks.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\FoodDrinks.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

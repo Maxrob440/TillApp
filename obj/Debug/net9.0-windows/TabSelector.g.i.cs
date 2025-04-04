@@ -61,7 +61,7 @@ namespace TillApp {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/TillApp;V1.0.0.0;component/tabselector.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/TillApp;component/tabselector.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\TabSelector.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

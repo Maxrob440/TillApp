@@ -54,6 +54,10 @@ namespace TillApp
         private void pay(object sender, RoutedEventArgs e)
         {
             int selected_tab = tablistbox.SelectedIndex;
+            if (selected_tab == -1)
+            {
+                return;
+            }
             List<List<int>> current_order = TabHelper.Instance.get_tabs()[selected_tab];
             foreach (List<int> tab in current_order) {
                 Current_order.Instance.add_item(tab[0], tab[1]);
